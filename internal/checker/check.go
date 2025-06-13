@@ -12,6 +12,10 @@ type CheckResult struct {
 	Err    error
 }
 
+type ReportEntry struct {
+	Name string
+}
+
 func CheckURL(url string) CheckResult {
 	client := http.Client{
 		Timeout: time.Second * 3,
